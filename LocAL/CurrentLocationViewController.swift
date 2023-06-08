@@ -34,14 +34,20 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     let authStatus = locationManager.authorizationStatus
     if authStatus == .notDetermined {
       locationManager.requestWhenInUseAuthorization()
-//      return
+      return
     }
     if authStatus == .denied || authStatus == .restricted {
       showLocationServicesDeniedAlert()
       return
     }
     
-    startLocationManager()
+    if updatingLocation {
+      stopLocationManager()
+    } else {
+      location = nil
+      lastLocationError = nil
+      startLocationManager()
+    }
     updateLabels()
   }
 
@@ -60,15 +66,30 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     updateLabels()
   }
   
+  // imp page: 567
   func locationManager(
     _ manager: CLLocationManager,
     didUpdateLocations locations: [CLLocation]
   ) {
     let newLocation = locations.last!
-    location = newLocation
-    lastLocationError = nil
-    updateLabels()
     print("didUpdateLocations \(newLocation)")
+    
+    if newLocation.timestamp.timeIntervalSinceNow < -5 {
+      return
+    }
+    if newLocation.horizontalAccuracy < 0 {
+      return
+    }
+    if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
+      lastLocationError = nil
+      location = newLocation
+      
+      if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
+        print("*** We're done!")
+        stopLocationManager()
+      }
+      updateLabels()
+    }
   }
   
   // MARK: - Helper Methods
@@ -86,6 +107,14 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       locationManager.stopUpdatingLocation()
       locationManager.delegate = nil
       updatingLocation = false
+    }
+  }
+  
+  func configureGetButton() {
+    if updatingLocation {
+      getButton.setTitle("Stop", for: .normal)
+    } else {
+      getButton.setTitle("Get My Location", for: .normal)
     }
   }
 
@@ -137,5 +166,6 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
       }
       messageLabel.text = statusMessage
     }
+    configureGetButton()
   }
 }
