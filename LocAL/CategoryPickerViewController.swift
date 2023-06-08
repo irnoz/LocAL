@@ -9,6 +9,7 @@ import UIKit
 
 class CategoryPickerViewController: UITableViewController {
   var selectedCategoryName = ""
+
   let categories = [
     "No Category",
     "Apple Store",
@@ -22,13 +23,28 @@ class CategoryPickerViewController: UITableViewController {
     "Landmark",
     "Park"
   ]
+
   var selectedIndexPath = IndexPath()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     for i in 0..<categories.count {
       if categories[i] == selectedCategoryName {
         selectedIndexPath = IndexPath(row: i, section: 0)
         break
+      }
+    }
+  }
+
+  // MARK: - Navigation
+  override func prepare(
+    for segue: UIStoryboardSegue,
+    sender: Any?
+  ) {
+    if segue.identifier == "PickedCategory" {
+      let cell = sender as! UITableViewCell
+      if let indexPath = tableView.indexPath(for: cell) {
+        selectedCategoryName = categories[indexPath.row]
       }
     }
   }
@@ -70,19 +86,6 @@ class CategoryPickerViewController: UITableViewController {
         oldCell.accessoryType = .none
       }
       selectedIndexPath = indexPath
-    }
-  }
-
-  // MARK: - Navigation
-  override func prepare(
-    for segue: UIStoryboardSegue,
-    sender: Any?
-  ){
-    if segue.identifier == "PickedCategory" {
-      let cell = sender as! UITableViewCell
-      if let indexPath = tableView.indexPath(for: cell) {
-        selectedCategoryName = categories[indexPath.row]
-      }
     }
   }
 }

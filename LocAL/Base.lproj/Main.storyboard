@@ -326,12 +326,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addressLabel" destination="BjM-fG-xlY" id="vFR-q6-wiM"/>
+                        <outlet property="addressLabel" destination="BjM-fG-xlY" id="Gfk-Dh-fm6"/>
                         <outlet property="categoryLabel" destination="UBx-Lj-kEE" id="S2p-iv-NEr"/>
-                        <outlet property="dateLabel" destination="wra-Pd-0qF" id="N9l-ld-K3z"/>
-                        <outlet property="descriptionTextView" destination="sww-Tg-lds" id="Ir6-lf-hqN"/>
-                        <outlet property="latitudeLabel" destination="YPF-IL-rLS" id="QYo-mz-0St"/>
-                        <outlet property="longitudeLabel" destination="BAl-I7-XLr" id="goP-gt-aCb"/>
+                        <outlet property="dateLabel" destination="wra-Pd-0qF" id="rhj-KP-cCu"/>
+                        <outlet property="descriptionTextView" destination="sww-Tg-lds" id="qLG-73-SFb"/>
+                        <outlet property="latitudeLabel" destination="YPF-IL-rLS" id="WO0-K4-YwN"/>
+                        <outlet property="longitudeLabel" destination="BAl-I7-XLr" id="i0s-PN-hHa"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFI-a3-DFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -364,7 +364,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="jlP-xU-ahe" kind="unwind" unwindAction="categoryPickerDidPickCategory:" id="I0w-4o-U5e"/>
+                                    <segue destination="jlP-xU-ahe" kind="unwind" identifier="PickedCategory" unwindAction="categoryPickerDidPickCategory:" id="I0w-4o-U5e"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
