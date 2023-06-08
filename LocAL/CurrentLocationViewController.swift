@@ -100,13 +100,14 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         performingReverseGeocoding = true
         
         geocoder.reverseGeocodeLocation(newLocation) { placemarks, error in
-          if let error = error {
-            print("*** Reverse Geocoding error: \(error.localizedDescription)")
-            return
+          self.lastGeocodingError = error
+          if error == nil, let places = placemarks, !places.isEmpty {
+            self.placemark = places.last!
+          } else {
+            self.placemark = nil
           }
-          if let places = placemarks {
-            print("*** Found places: \(places)")
-          }
+          self.performingReverseGeocoding = false
+          self.updateLabels()
         }
       }
     }
