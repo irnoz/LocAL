@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -393,6 +394,7 @@
                     <connections>
                         <segue destination="YjN-KR-1cY" kind="relationship" relationship="viewControllers" id="aS6-3U-iNn"/>
                         <segue destination="piD-pw-DjA" kind="relationship" relationship="viewControllers" id="cJ4-zm-IR9"/>
+                        <segue destination="8G5-39-Thf" kind="relationship" relationship="viewControllers" id="vul-Xd-L7H"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRN-rk-aqN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -491,6 +493,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUP-tp-aRw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="929" y="771"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="P40-Pu-bei">
+            <objects>
+                <viewController id="SpN-LX-0pL" customClass="MapViewController" customModule="LocAL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E8T-Og-mAP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhj-MX-xxg">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qBj-nM-2CV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fhj-MX-xxg" firstAttribute="bottom" secondItem="qBj-nM-2CV" secondAttribute="bottom" id="Xhh-xg-5Rq"/>
+                            <constraint firstItem="fhj-MX-xxg" firstAttribute="leading" secondItem="qBj-nM-2CV" secondAttribute="leading" id="bQg-Dq-Oj0"/>
+                            <constraint firstItem="fhj-MX-xxg" firstAttribute="trailing" secondItem="qBj-nM-2CV" secondAttribute="trailing" id="kIh-Xe-WgV"/>
+                            <constraint firstItem="fhj-MX-xxg" firstAttribute="top" secondItem="qBj-nM-2CV" secondAttribute="top" id="pbk-0J-EHT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="9O1-7q-D23">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" id="uc6-2X-C2L">
+                            <connections>
+                                <action selector="showLocations" destination="SpN-LX-0pL" id="TYc-yK-GaZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="User" id="npY-ZM-Aa7">
+                            <connections>
+                                <action selector="showUser" destination="SpN-LX-0pL" id="851-9d-P8T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="fhj-MX-xxg" id="HeA-rU-QXr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUK-IO-Fr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="1557"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="kxG-jy-Bfo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8G5-39-Thf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="eIg-In-u77"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J6k-aH-RLr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SpN-LX-0pL" kind="relationship" relationship="rootViewController" id="NLd-aK-I54"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZD-fb-afD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="1557"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
