@@ -427,7 +427,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="65" id="AHm-F9-sqJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="65" id="AHm-F9-sqJ" customClass="LocationCell" customModule="LocAL" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AHm-F9-sqJ" id="ase-nR-Q1a">
@@ -457,6 +457,11 @@
                                         <constraint firstItem="aGT-1h-kFF" firstAttribute="top" secondItem="ase-nR-Q1a" secondAttribute="topMargin" id="vcG-FK-mxa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="puP-v7-uew" id="KBP-DO-Ejz"/>
+                                    <outlet property="descriptionLabel" destination="aGT-1h-kFF" id="0pb-UY-57Q"/>
+                                    <segue destination="RV9-05-Du4" kind="show" identifier="EditLocation" id="u2b-H2-pkK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -488,6 +493,9 @@
             <point key="canvasLocation" x="929" y="771"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="u2b-H2-pkK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
