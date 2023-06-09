@@ -284,7 +284,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     if location == nil {
       stopLocationManager()
       lastLocationError = NSError(
-        domain: "MyLocationsErrorDomain", // domain: "LocALErrorDomain",
+        domain: "LocALErrorDomain",
         code: 1,
         userInfo: nil)
       updateLabels()

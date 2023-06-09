@@ -378,7 +378,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4q-Gb-RDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="jlP-xU-ahe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3354" y="3"/>
+            <point key="canvasLocation" x="3294" y="3"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Iep-hY-kTH">
@@ -392,6 +392,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="YjN-KR-1cY" kind="relationship" relationship="viewControllers" id="aS6-3U-iNn"/>
+                        <segue destination="piD-pw-DjA" kind="relationship" relationship="viewControllers" id="cJ4-zm-IR9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRN-rk-aqN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -416,6 +417,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Kt-iw-fyv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="2.2488755622188905"/>
+        </scene>
+        <!--Locations-->
+        <scene sceneID="T8L-0I-lrd">
+            <objects>
+                <tableViewController id="8h3-rt-jD8" customClass="LocationsViewController" customModule="LocAL" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xQL-mD-BSA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="65" id="AHm-F9-sqJ">
+                                <rect key="frame" x="0.0" y="50" width="375" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AHm-F9-sqJ" id="ase-nR-Q1a">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGT-1h-kFF">
+                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puP-v7-uew">
+                                            <rect key="frame" x="16" y="36" width="343" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.50404580219999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="puP-v7-uew" secondAttribute="bottom" id="Kpz-Gb-0KR"/>
+                                        <constraint firstItem="aGT-1h-kFF" firstAttribute="trailing" secondItem="ase-nR-Q1a" secondAttribute="trailingMargin" id="U20-Uq-BwN"/>
+                                        <constraint firstItem="puP-v7-uew" firstAttribute="leading" secondItem="ase-nR-Q1a" secondAttribute="leadingMargin" id="VeP-ny-mUM"/>
+                                        <constraint firstItem="puP-v7-uew" firstAttribute="top" secondItem="aGT-1h-kFF" secondAttribute="bottom" constant="4" id="XiY-me-RVd"/>
+                                        <constraint firstItem="aGT-1h-kFF" firstAttribute="leading" secondItem="ase-nR-Q1a" secondAttribute="leadingMargin" id="cu8-Cm-7H6"/>
+                                        <constraint firstItem="puP-v7-uew" firstAttribute="trailing" secondItem="ase-nR-Q1a" secondAttribute="trailingMargin" id="nSc-5K-PgK"/>
+                                        <constraint firstItem="aGT-1h-kFF" firstAttribute="top" secondItem="ase-nR-Q1a" secondAttribute="topMargin" id="vcG-FK-mxa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8h3-rt-jD8" id="QoZ-YN-l6j"/>
+                            <outlet property="delegate" destination="8h3-rt-jD8" id="9SP-5J-9H8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Locations" id="sdn-ZZ-B7y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h06-Ia-iIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709.5999999999999" y="771.36431784107947"/>
+        </scene>
+        <!--Locations-->
+        <scene sceneID="x0B-p3-Ta8">
+            <objects>
+                <navigationController id="piD-pw-DjA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Locations" id="uYH-dE-0iD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Er6-tl-p6x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8h3-rt-jD8" kind="relationship" relationship="rootViewController" id="2A4-Ld-BcI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUP-tp-aRw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="771"/>
         </scene>
     </scenes>
     <resources>
