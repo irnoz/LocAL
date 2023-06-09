@@ -60,7 +60,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Tag Location"/>
                                 <connections>
-                                    <segue destination="RV9-05-Du4" kind="show" id="8Y7-Q7-6dx"/>
+                                    <segue destination="RV9-05-Du4" kind="show" identifier="TagLocation" id="8Y7-Q7-6dx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfH-LT-n4k">
@@ -386,6 +386,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DD4-n1-m0S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DZQ-VW-6SS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
