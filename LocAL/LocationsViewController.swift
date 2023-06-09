@@ -41,6 +41,7 @@ class LocationsViewController: UITableViewController {
     super.viewDidLoad()
     
     performFetch()
+    navigationItem.rightBarButtonItem = editButtonItem
   }
   
   // MARK: - Table View Data Source
