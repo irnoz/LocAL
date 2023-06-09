@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8483C4F2A3306B600A7DD9A /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8483C4E2A3306B600A7DD9A /* HudView.swift */; };
+		A8483C512A3314EB00A7DD9A /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8483C502A3314EB00A7DD9A /* Functions.swift */; };
 		A86D76A62A32042F0044F37F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D76A52A32042F0044F37F /* AppDelegate.swift */; };
 		A86D76A82A32042F0044F37F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D76A72A32042F0044F37F /* SceneDelegate.swift */; };
 		A86D76AA2A32042F0044F37F /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86D76A92A32042F0044F37F /* CurrentLocationViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		A8483C4E2A3306B600A7DD9A /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		A8483C502A3314EB00A7DD9A /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A86D76A22A32042F0044F37F /* LocAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86D76A52A32042F0044F37F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A86D76A72A32042F0044F37F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				A86D76B62A3204310044F37F /* Info.plist */,
 				A86D76AE2A32042F0044F37F /* LocAL.xcdatamodeld */,
 				A8483C4E2A3306B600A7DD9A /* HudView.swift */,
+				A8483C502A3314EB00A7DD9A /* Functions.swift */,
 			);
 			path = LocAL;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				A86D76BF2A3276CB0044F37F /* CategoryPickerViewController.swift in Sources */,
 				A86D76AA2A32042F0044F37F /* CurrentLocationViewController.swift in Sources */,
 				A86D76B02A32042F0044F37F /* LocAL.xcdatamodeld in Sources */,
+				A8483C512A3314EB00A7DD9A /* Functions.swift in Sources */,
 				A86D76A62A32042F0044F37F /* AppDelegate.swift in Sources */,
 				A86D76A82A32042F0044F37F /* SceneDelegate.swift in Sources */,
 				A8483C4F2A3306B600A7DD9A /* HudView.swift in Sources */,
