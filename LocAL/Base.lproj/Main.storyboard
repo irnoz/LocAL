@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DD4-n1-m0S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DD4-n1-m0S">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,37 +19,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtN-mu-5fm">
-                                <rect key="frame" x="16" y="60" width="343" height="21"/>
+                                <rect key="frame" x="16" y="80" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Latitude goes here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhp-cn-vWb">
-                                <rect key="frame" x="204.5" y="105" width="154.5" height="21"/>
+                                <rect key="frame" x="204.5" y="125" width="154.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Longitude goes here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkP-Gm-whv">
-                                <rect key="frame" x="190" y="134" width="169" height="21"/>
+                                <rect key="frame" x="190" y="154" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQd-X1-3QK">
-                                <rect key="frame" x="16" y="134" width="81" height="21"/>
+                                <rect key="frame" x="16" y="154" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Eo-u2-kev">
-                                <rect key="frame" x="16" y="105" width="67" height="21"/>
+                                <rect key="frame" x="16" y="125" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Address goes here)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQs-nF-Siq">
-                                <rect key="frame" x="16" y="179" width="343" height="50"/>
+                                <rect key="frame" x="16" y="199" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5fR-tA-pGx"/>
                                 </constraints>
@@ -57,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw8-yD-F93">
-                                <rect key="frame" x="16" y="253" width="343" height="35"/>
+                                <rect key="frame" x="16" y="273" width="343" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Tag Location"/>
                                 <connections>
@@ -189,15 +190,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxM-hY-hpu">
-                                                    <rect key="frame" x="16" y="14.5" width="59" height="15"/>
+                                                    <rect key="frame" x="16" y="14.5" width="59" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uYg-Vn-Mbt">
+                                                    <rect key="frame" x="91" y="0.0" width="249.5" height="43.5"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="uYg-Vn-Mbt" firstAttribute="top" secondItem="Q8I-cP-p2d" secondAttribute="top" id="Pz2-ju-IFg"/>
+                                                <constraint firstItem="uYg-Vn-Mbt" firstAttribute="leading" secondItem="YxM-hY-hpu" secondAttribute="trailing" constant="16" id="R6J-0m-s8c"/>
                                                 <constraint firstItem="YxM-hY-hpu" firstAttribute="centerY" secondItem="Q8I-cP-p2d" secondAttribute="centerY" id="an9-KV-dDA"/>
+                                                <constraint firstAttribute="bottom" secondItem="uYg-Vn-Mbt" secondAttribute="bottom" id="o9D-ir-5v0"/>
                                                 <constraint firstItem="YxM-hY-hpu" firstAttribute="leading" secondItem="Q8I-cP-p2d" secondAttribute="leadingMargin" id="v1m-Ng-t65"/>
+                                                <constraint firstAttribute="trailing" secondItem="uYg-Vn-Mbt" secondAttribute="trailing" constant="8" id="yjD-jk-v1v"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -327,10 +335,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="YxM-hY-hpu" id="6SS-Lm-RMt"/>
                         <outlet property="addressLabel" destination="BjM-fG-xlY" id="Gfk-Dh-fm6"/>
                         <outlet property="categoryLabel" destination="UBx-Lj-kEE" id="S2p-iv-NEr"/>
                         <outlet property="dateLabel" destination="wra-Pd-0qF" id="rhj-KP-cCu"/>
                         <outlet property="descriptionTextView" destination="sww-Tg-lds" id="qLG-73-SFb"/>
+                        <outlet property="imageView" destination="uYg-Vn-Mbt" id="m0M-QM-4WP"/>
                         <outlet property="latitudeLabel" destination="YPF-IL-rLS" id="WO0-K4-YwN"/>
                         <outlet property="longitudeLabel" destination="BAl-I7-XLr" id="i0s-PN-hHa"/>
                     </connections>
@@ -408,7 +418,7 @@
                     <tabBarItem key="tabBarItem" title="Tag" id="0J8-aX-agl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kJX-d7-mrx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -483,7 +493,7 @@
                 <navigationController id="piD-pw-DjA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Locations" id="uYH-dE-0iD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Er6-tl-p6x">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -503,7 +513,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhj-MX-xxg">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
@@ -544,7 +554,7 @@
                     <tabBarItem key="tabBarItem" title="Map" id="eIg-In-u77"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J6k-aH-RLr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

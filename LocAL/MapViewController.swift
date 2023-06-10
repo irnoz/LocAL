@@ -111,7 +111,7 @@ class MapViewController: UIViewController {
   override func prepare(
     for segue: UIStoryboardSegue,
     sender: Any?
-  ){
+  ) {
     if segue.identifier == "EditLocation" {
       let controller = segue.destination as!
       LocationDetailsViewController
@@ -123,6 +123,8 @@ class MapViewController: UIViewController {
   }
 }
 
+// FIXME: Fix custom pinview
+// hook it up to DetailViewController
 extension MapViewController: MKMapViewDelegate {
   func mapView(
     _ mapView: MKMapView,
