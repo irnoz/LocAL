@@ -169,12 +169,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UBx-Lj-kEE">
-                                                    <rect key="frame" x="307.5" y="15" width="33" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="No Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UBx-Lj-kEE">
+                                                    <rect key="frame" x="269" y="15" width="71.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -238,8 +238,8 @@
                                                     <rect key="frame" x="326" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -262,8 +262,8 @@
                                                     <rect key="frame" x="326" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -284,8 +284,8 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjM-fG-xlY">
                                                     <rect key="frame" x="326" y="14.5" width="33" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -315,8 +315,8 @@
                                                     <rect key="frame" x="326" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.6022152932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -466,7 +466,7 @@
                                             <color key="textColor" white="1" alpha="0.60221529322744205" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="highlightedColor" white="1" alpha="0.60221529322744205" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eIM-2H-RoG">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eIM-2H-RoG">
                                             <rect key="frame" x="16" y="6" width="52" height="52"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="52" id="N1L-1E-G77"/>
@@ -545,12 +545,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="9O1-7q-D23">
-                        <barButtonItem key="leftBarButtonItem" title="Locations" id="uc6-2X-C2L">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" image="Pin" id="uc6-2X-C2L">
                             <connections>
                                 <action selector="showLocations" destination="SpN-LX-0pL" id="TYc-yK-GaZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="User" id="npY-ZM-Aa7">
+                        <barButtonItem key="rightBarButtonItem" title="User" image="User" id="npY-ZM-Aa7">
                             <connections>
                                 <action selector="showUser" destination="SpN-LX-0pL" id="851-9d-P8T"/>
                             </connections>
@@ -586,13 +586,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Y7-Q7-6dx"/>
+        <segue reference="u2b-H2-pkK"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="Locations" width="30" height="30"/>
         <image name="Map" width="30" height="30"/>
+        <image name="Pin" width="24" height="24"/>
         <image name="Tag" width="30" height="30"/>
+        <image name="User" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.93333333333333335" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

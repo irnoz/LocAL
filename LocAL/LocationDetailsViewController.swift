@@ -173,9 +173,9 @@ class LocationDetailsViewController: UITableViewController {
     line.add(text: placemark.thoroughfare, separatedBy: " ")
     line.add(text: placemark.locality, separatedBy: ", ")
     line.add(text: placemark.administrativeArea, separatedBy: ", ")
-   line.add(text: placemark.postalCode, separatedBy: " ")
-   line.add(text: placemark.country, separatedBy: ", ")
-   return line
+    line.add(text: placemark.postalCode, separatedBy: " ")
+    line.add(text: placemark.country, separatedBy: ", ")
+    return line
   }
 
   func format(date: Date) -> String {

@@ -14,7 +14,12 @@ class LocationCell: UITableViewCell {
 
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
+    
+    // Rounded corners for images
+    photoImageView.layer.cornerRadius =
+    photoImageView.bounds.size.width / 2
+    photoImageView.clipsToBounds = true
+    separatorInset = UIEdgeInsets(top: 0, left: 82, bottom: 0, right: 0)
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
@@ -50,6 +55,6 @@ class LocationCell: UITableViewCell {
       return image.resized(
         withBounds: CGSize(width: 52, height: 52))
     }
-    return UIImage()
+    return UIImage(named: "No Photo")!
   }
 }
