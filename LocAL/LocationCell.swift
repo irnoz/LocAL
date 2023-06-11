@@ -11,18 +11,18 @@ class LocationCell: UITableViewCell {
   @IBOutlet var descriptionLabel: UILabel!
   @IBOutlet var addressLabel: UILabel!
   @IBOutlet var photoImageView: UIImageView!
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
   }
-  
+
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     
     // Configure the view for the selected state
   }
-  
+
   // MARK: - Helper Method
   func configure(for location: Location) {
     if location.locationDescription.isEmpty {
@@ -39,7 +39,8 @@ class LocationCell: UITableViewCell {
         text += tmp + ", "
       }
       if let tmp = placemark.locality {
-        text += tmp }
+        text += tmp
+      }
       addressLabel.text = text
     } else {
       addressLabel.text = String(
