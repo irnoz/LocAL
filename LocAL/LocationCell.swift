@@ -32,15 +32,9 @@ class LocationCell: UITableViewCell {
     }
     if let placemark = location.placemark {
       var text = ""
-      if let tmp = placemark.subThoroughfare {
-        text += tmp + " "
-      }
-      if let tmp = placemark.thoroughfare {
-        text += tmp + ", "
-      }
-      if let tmp = placemark.locality {
-        text += tmp
-      }
+      text.add(text: placemark.subThoroughfare)
+      text.add(text: placemark.thoroughfare, separatedBy: " ")
+      text.add(text: placemark.locality, separatedBy: ", ")
       addressLabel.text = text
     } else {
       addressLabel.text = String(

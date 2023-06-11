@@ -119,7 +119,6 @@ class LocationsViewController: UITableViewController {
   }
 }
 
-// MARK: - NSFetchedResultsController Delegate Extension
 extension LocationsViewController: NSFetchedResultsControllerDelegate {
   func controllerWillChangeContent(
     _ controller: NSFetchedResultsController<NSFetchRequestResult>
