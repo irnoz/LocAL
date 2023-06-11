@@ -13,6 +13,7 @@ class MapViewController: UIViewController {
   @IBOutlet var mapView: MKMapView!
 
   var locations = [Location]()
+  
   var managedObjectContext: NSManagedObjectContext! {
     didSet {
       NotificationCenter.default.addObserver(
@@ -31,6 +32,7 @@ class MapViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     mapView.delegate = self
+    
     updateLocations()
     if !locations.isEmpty {
       showLocations()
@@ -43,9 +45,9 @@ class MapViewController: UIViewController {
     sender: Any?
   ) {
     if segue.identifier == "EditLocation" {
-      let controller = segue.destination as!
-      LocationDetailsViewController
+      let controller = segue.destination as! LocationDetailsViewController
       controller.managedObjectContext = managedObjectContext
+
       let button = sender as! UIButton
       let location = locations[button.tag]
       controller.locationToEdit = location
