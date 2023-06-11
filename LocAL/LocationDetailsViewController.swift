@@ -253,7 +253,6 @@ class LocationDetailsViewController: UITableViewController {
   }
 }
 
-// MARK: - Extensions
 extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   // MARK: - Image Helper Methods
   func takePhotoWithCamera() {

@@ -11,7 +11,7 @@ import CoreData
 
 class MapViewController: UIViewController {
   @IBOutlet var mapView: MKMapView!
-  
+
   var locations = [Location]()
   var managedObjectContext: NSManagedObjectContext! {
     didSet {
@@ -26,16 +26,32 @@ class MapViewController: UIViewController {
       }
     }
   }
-  
+
   // MARK: - Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    mapView.delegate = self
     updateLocations()
     if !locations.isEmpty {
       showLocations()
     }
   }
-  
+
+  // MARK: - Navigation
+  override func prepare(
+    for segue: UIStoryboardSegue,
+    sender: Any?
+  ) {
+    if segue.identifier == "EditLocation" {
+      let controller = segue.destination as!
+      LocationDetailsViewController
+      controller.managedObjectContext = managedObjectContext
+      let button = sender as! UIButton
+      let location = locations[button.tag]
+      controller.locationToEdit = location
+    }
+  }
+
   // MARK: - Actions
   @IBAction func showUser() {
     let region = MKCoordinateRegion(
@@ -46,7 +62,7 @@ class MapViewController: UIViewController {
       mapView.regionThatFits(region),
       animated: true)
   }
-  
+
   @IBAction func showLocations() {
     let theRegion = region(for: locations)
     mapView.setRegion(theRegion, animated: true)
@@ -55,13 +71,16 @@ class MapViewController: UIViewController {
   // MARK: - Helper methods
   func updateLocations() {
     mapView.removeAnnotations(locations)
+
     let entity = Location.entity()
+
     let fetchRequest = NSFetchRequest<Location>()
     fetchRequest.entity = entity
+
     locations = try! managedObjectContext.fetch(fetchRequest)
     mapView.addAnnotations(locations)
   }
-  
+
   func region(for annotations: [MKAnnotation]) -> MKCoordinateRegion {
     let region: MKCoordinateRegion
     switch annotations.count {
@@ -102,29 +121,12 @@ class MapViewController: UIViewController {
     }
     return mapView.regionThatFits(region)
   }
-  
+
   @objc func showLocationDetails(_ sender: UIButton) {
     performSegue(withIdentifier: "EditLocation", sender: sender)
   }
-
-  // MARK: - Navigation
-  override func prepare(
-    for segue: UIStoryboardSegue,
-    sender: Any?
-  ) {
-    if segue.identifier == "EditLocation" {
-      let controller = segue.destination as!
-      LocationDetailsViewController
-      controller.managedObjectContext = managedObjectContext
-      let button = sender as! UIButton
-      let location = locations[button.tag]
-      controller.locationToEdit = location
-    }
-  }
 }
 
-// FIXME: Fix custom pinview
-// hook it up to DetailViewController
 extension MapViewController: MKMapViewDelegate {
   func mapView(
     _ mapView: MKMapView,
