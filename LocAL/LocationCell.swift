@@ -10,17 +10,18 @@ import UIKit
 class LocationCell: UITableViewCell {
   @IBOutlet var descriptionLabel: UILabel!
   @IBOutlet var addressLabel: UILabel!
+  @IBOutlet var photoImageView: UIImageView!
   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
+  
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+    
+    // Configure the view for the selected state
+  }
   
   // MARK: - Helper Method
   func configure(for location: Location) {
@@ -45,6 +46,15 @@ class LocationCell: UITableViewCell {
         format: "Lat: %.8f, Long: %.8f",
         location.latitude,
         location.longitude)
-    } }
+    }
+    photoImageView.image = thumbnail(for: location)
+  }
 
+  func thumbnail(for location: Location) -> UIImage {
+    if location.hasPhoto, let image = location.photoImage {
+      return image.resized(
+        withBounds: CGSize(width: 52, height: 52))
+    }
+    return UIImage()
+  }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81216102A363D6E0005853B /* UIImage+Resize.swift..swift in Sources */ = {isa = PBXBuildFile; fileRef = A812160F2A363D6E0005853B /* UIImage+Resize.swift..swift */; };
 		A8483C4F2A3306B600A7DD9A /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8483C4E2A3306B600A7DD9A /* HudView.swift */; };
 		A8483C512A3314EB00A7DD9A /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8483C502A3314EB00A7DD9A /* Functions.swift */; };
 		A8483C542A3324C500A7DD9A /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8483C522A3324C500A7DD9A /* Location+CoreDataClass.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A812160F2A363D6E0005853B /* UIImage+Resize.swift..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift..swift"; sourceTree = "<group>"; };
 		A8483C4E2A3306B600A7DD9A /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		A8483C502A3314EB00A7DD9A /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A8483C522A3324C500A7DD9A /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -90,9 +92,10 @@
 				A86D76AE2A32042F0044F37F /* LocAL.xcdatamodeld */,
 				A8483C4E2A3306B600A7DD9A /* HudView.swift */,
 				A8483C502A3314EB00A7DD9A /* Functions.swift */,
+				A8483C5C2A337F9200A7DD9A /* MapViewController.swift */,
 				A8483C562A33462300A7DD9A /* LocationsViewController.swift */,
 				A8483C582A334B5D00A7DD9A /* LocationCell.swift */,
-				A8483C5C2A337F9200A7DD9A /* MapViewController.swift */,
+				A812160F2A363D6E0005853B /* UIImage+Resize.swift..swift */,
 			);
 			path = LocAL;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				A86D76B02A32042F0044F37F /* LocAL.xcdatamodeld in Sources */,
 				A8483C512A3314EB00A7DD9A /* Functions.swift in Sources */,
 				A8483C572A33462300A7DD9A /* LocationsViewController.swift in Sources */,
+				A81216102A363D6E0005853B /* UIImage+Resize.swift..swift in Sources */,
 				A8483C552A3324C500A7DD9A /* Location+CoreDataProperties.swift in Sources */,
 				A8483C5D2A337F9200A7DD9A /* MapViewController.swift in Sources */,
 				A8483C592A334B5D00A7DD9A /* LocationCell.swift in Sources */,

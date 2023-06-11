@@ -26,7 +26,7 @@ class LocationDetailsViewController: UITableViewController {
   @IBOutlet var dateLabel: UILabel!
   @IBOutlet var imageView: UIImageView!
   @IBOutlet var addPhotoLabel: UILabel!
-  IBOutlet var imageHeight: NSLayoutConstraint!
+  @IBOutlet var imageHeight: NSLayoutConstraint!
 
   var image: UIImage?
   var coordinate = CLLocationCoordinate2D(
@@ -49,12 +49,23 @@ class LocationDetailsViewController: UITableViewController {
         placemark = location.placemark
       } }
   }
+  var observer: Any!
 
   // MARK: - Life Cycle
+  deinit {
+    print("*** deinit \(self)")
+    NotificationCenter.default.removeObserver(observer!)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     if let location = locationToEdit {
       title = "Edit Location"
+      if location.hasPhoto {
+        if let theImage = location.photoImage {
+          show(image: theImage)
+        }
+      }
     }
     
     descriptionTextView.text = descriptionText
@@ -126,6 +137,7 @@ class LocationDetailsViewController: UITableViewController {
     } else {
       hudView.text = "Tagged"
       location = Location(context: managedObjectContext)
+      location.photoID = nil
     }
     
     location.locationDescription = descriptionTextView.text
@@ -134,6 +146,20 @@ class LocationDetailsViewController: UITableViewController {
     location.longitude = coordinate.longitude
     location.date = date
     location.placemark = placemark
+    
+    // Save image
+    if let image = image {
+      if !location.hasPhoto {
+        location.photoID = Location.nextPhotoID() as NSNumber
+      }
+      if let data = image.jpegData(compressionQuality: 0.5) {
+        do {
+          try data.write(to: location.photoURL, options: .atomic)
+        } catch {
+          print("Error writing file: \(error)")
+        }
+      }
+    }
     
     do {
       try managedObjectContext.save()
@@ -202,6 +228,22 @@ class LocationDetailsViewController: UITableViewController {
     imageView.image = image
     imageView.isHidden = false
     addPhotoLabel.text = ""
+    imageHeight.constant = 260
+    tableView.reloadData()
+  }
+  
+  func listenForBackGroundNotification() {
+    observer = NotificationCenter.default.addObserver(
+      forName: UIScene.didEnterBackgroundNotification,
+      object: nil,
+      queue: OperationQueue.main) { [weak self] _ in
+        if let weakSelf = self {
+          if weakSelf.presentedViewController != nil {
+            weakSelf.dismiss(animated: false, completion: nil)
+          }
+          weakSelf.descriptionTextView.resignFirstResponder()
+        }
+      }
   }
 }
 
