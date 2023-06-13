@@ -71,6 +71,57 @@
 			path = Sound;
 			sourceTree = "<group>";
 		};
+		A81216162A3869520005853B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A8483C502A3314EB00A7DD9A /* Functions.swift */,
+				A812160F2A363D6E0005853B /* UIImage+Resize.swift..swift */,
+				A81216112A366ADE0005853B /* String+AddText.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A81216172A3869660005853B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8483C4E2A3306B600A7DD9A /* HudView.swift */,
+				A8483C582A334B5D00A7DD9A /* LocationCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A81216182A38697F0005853B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A86D76A92A32042F0044F37F /* CurrentLocationViewController.swift */,
+				A86D76BC2A3257100044F37F /* LocationDetailsViewController.swift */,
+				A86D76BE2A3276CB0044F37F /* CategoryPickerViewController.swift */,
+				A8483C5C2A337F9200A7DD9A /* MapViewController.swift */,
+				A8483C562A33462300A7DD9A /* LocationsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A81216192A386A170005853B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A86D76AB2A32042F0044F37F /* Main.storyboard */,
+				A86D76B12A3204310044F37F /* Assets.xcassets */,
+				A86D76B32A3204310044F37F /* LaunchScreen.storyboard */,
+				A86D76AE2A32042F0044F37F /* LocAL.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A812161A2A386A2F0005853B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8483C522A3324C500A7DD9A /* Location+CoreDataClass.swift */,
+				A8483C532A3324C500A7DD9A /* Location+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A86D76992A32042F0044F37F = {
 			isa = PBXGroup;
 			children = (
@@ -90,25 +141,14 @@
 		A86D76A42A32042F0044F37F /* LocAL */ = {
 			isa = PBXGroup;
 			children = (
-				A8483C522A3324C500A7DD9A /* Location+CoreDataClass.swift */,
-				A8483C532A3324C500A7DD9A /* Location+CoreDataProperties.swift */,
+				A812161A2A386A2F0005853B /* Models */,
 				A86D76A52A32042F0044F37F /* AppDelegate.swift */,
-				A86D76A72A32042F0044F37F /* SceneDelegate.swift */,
-				A86D76A92A32042F0044F37F /* CurrentLocationViewController.swift */,
-				A86D76BC2A3257100044F37F /* LocationDetailsViewController.swift */,
-				A86D76BE2A3276CB0044F37F /* CategoryPickerViewController.swift */,
-				A86D76AB2A32042F0044F37F /* Main.storyboard */,
-				A86D76B12A3204310044F37F /* Assets.xcassets */,
-				A86D76B32A3204310044F37F /* LaunchScreen.storyboard */,
 				A86D76B62A3204310044F37F /* Info.plist */,
-				A86D76AE2A32042F0044F37F /* LocAL.xcdatamodeld */,
-				A8483C4E2A3306B600A7DD9A /* HudView.swift */,
-				A8483C502A3314EB00A7DD9A /* Functions.swift */,
-				A8483C5C2A337F9200A7DD9A /* MapViewController.swift */,
-				A8483C562A33462300A7DD9A /* LocationsViewController.swift */,
-				A8483C582A334B5D00A7DD9A /* LocationCell.swift */,
-				A812160F2A363D6E0005853B /* UIImage+Resize.swift..swift */,
-				A81216112A366ADE0005853B /* String+AddText.swift */,
+				A86D76A72A32042F0044F37F /* SceneDelegate.swift */,
+				A81216182A38697F0005853B /* ViewControllers */,
+				A81216192A386A170005853B /* Resources */,
+				A81216172A3869660005853B /* Views */,
+				A81216162A3869520005853B /* Utils */,
 				A81216132A3683C50005853B /* Sound */,
 			);
 			path = LocAL;
