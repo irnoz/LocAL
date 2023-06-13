@@ -11,14 +11,9 @@ LocAL is a location aware app📱 built to store locations and whatever data use
 
 ## 💡 About the Project
 
-If you whant to keep an album of locations you've visited this app is for you, LocAL(Location Album) allows you to get and tag your current location. On startup users are greated with beautiful logo and a navigation bar. As the soon as the app loads "Get My Location" button will appear on the screen along with previously described items.
+If you whant to keep an album of locations you've visited this app is for you, LocAL(Location Album) allows you to get and tag your current location. On startup users are greated with beautiful logo and a navigation bar. As the soon as the app loads "Get My Location" button will appear on the screen along with previously described items. If the user taps the icon or the button the app trasitions with a beautiful animation to a new screen containing latitude, longitude and adress of current lcoation. To obtain this GPS coordinates for the user’s whereabouts the app uses Core Location framework 
 
-<img src=https://github.com/irnoz/LocAL/assets/58843342/0766f9e2-892c-46a8-a1e7-9f3385a2cf67 width="225" height="400"/>
-<img src=https://github.com/irnoz/LocAL/assets/58843342/7535f9ed-52e6-49cb-9c36-35b47b6fd9c6 width="225" height="400"/>
-
-If the user taps the icon or the button the app trasitions with a beautiful animation to a new screen containing latitude, longitude and adress of current lcoation. To obtain this GPS coordinates for the user’s whereabouts the app uses Core Location framework 
-
-<img src=https://github.com/irnoz/LocAL/assets/58843342/64a5b72c-d921-4651-bd02-2788ad74c4a8 width="225" height="400"/>
+<img src=https://github.com/irnoz/LocAL/assets/58843342/aa965c74-dff4-46d2-bfc7-bb125b4b713b width="225" height="400"/>
 <img src=https://github.com/irnoz/LocAL/assets/58843342/6917f9ca-c749-4068-a81b-f0063a1a974c width="225" height="400"/>
 
 After tapping on the "Tag Location" button app moves to new screen where user can add aditional data like description category or a image. From Image Picker users are able to take new photoes or import existing images from the library.
